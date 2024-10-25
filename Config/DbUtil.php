@@ -12,7 +12,7 @@ class DbUtil
 
     public function __construct()
     {
-        $dotenv=Dotenv::createImmutable(__DIR__);
+        $dotenv=Dotenv::createImmutable(dirname(__DIR__));
         $dotenv->load();
         
         $this->user=$_ENV['USER'];
